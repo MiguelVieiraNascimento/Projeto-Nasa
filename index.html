@@ -118,7 +118,11 @@ button[type="submit"]#business-form:hover {
             height: 100%;
             z-index: -1;
            
-            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); 
+            background-image:url(assets/img.png);
+            background-repeat: no-repeat;
+         background-position: 90%;
+            background-size: cover;
+            
         }
 
         #stars, #stars2, #stars3 {
@@ -135,7 +139,13 @@ button[type="submit"]#business-form:hover {
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+#google-img{
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    position: absolute;
+    
+}
 
         input[type="radio"]:checked + label,
         input[type="checkbox"]:checked + label {
@@ -148,6 +158,15 @@ button[type="submit"]#business-form:hover {
             background-color: rgba(251, 191, 36, 0.6); 
             border-color: #fbbf24;
         }
+        .mb-10 .text-center{
+            height: 100px;
+            width: 100px;
+        }
+        .logo-png{
+            height: 100px;
+            width: 100px;
+        }
+        
     </style>
 </head>
 <body class="text-white">
@@ -159,7 +178,38 @@ button[type="submit"]#business-form:hover {
     </div>
 
     <main class="min-h-screen w-full flex items-center justify-center p-4 transition-opacity duration-500" id="app-container">
+<div id="login-screen" class="hidden w-full max-w-sm flex flex-col items-center justify-center p-4">
+    
+    <div class="mb-10 text-center">
+        <img src="assets/ChatGPT Image 4 de out. de 2025, 13_24_25.png" alt="Starfield Logo" class="mx-auto" style="width: 300px; height: auto; margin-bottom: -50px;">
 
+        </div>
+
+    <div class="w-full space-y-3">
+     
+        </button>
+        <button class="w-full flex items-center justify-center bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-semibold py-3 px-4 rounded-lg transition-colors shadow-lg" data-login-type="google">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-2 h-5 w-5"><path d="M12 4.419c-2.827 0-5.599 1.139-7.597 3.137l-2.023-2.023c2.443-2.443 5.629-3.962 9.62-3.962 3.86 0 7.348 1.405 9.979 3.962l-2.316 2.023c-1.631-1.428-3.793-2.298-5.663-2.298zm-1.782 11.231l-.475-3.321h-2.911v2.911c.96.082 1.838.258 2.586.41zm-1.011-4.711l-.096-.671h-1.905v.671h1.905zm2.793.003l-.004-3.562h-2.911l-.475 3.324c.749.16 1.627.336 2.586.41zm2.37-3.791h-1.928l-.055-1.229h1.928c.002.41-.004.82-.012 1.229zm-4.195 7.425c.78.204 1.761.326 2.915.342l.001 3.284c-3.997 0-7.185-1.52-9.628-3.963l2.025-2.025c1.998 1.998 4.77 3.137 7.597 3.137zm-3.085-4.572h-1.903v-.671h1.903l.001.671zm4.825-3.982c-.006-.411-.004-.821-.012-1.229h1.929l-.054 1.229h-1.863zm-4.757 3.985l-.002-.671h-1.907v.671h1.907zm-1.444-2.257l-.053-1.229h-1.848v1.229h1.901zm1.901-2.055h-1.901v-.671h1.901l.002.671zm1.218-1.916h-1.901v-.671h1.901l-.002.671zm1.205 1.916l-.001-.671h-1.903v.671h1.904zm-1.898-2.055h-1.904v-.671h1.904l.002.671zm-.654 3.791h-2.911l-.475 3.321c.749.16 1.627.336 2.586.41l.799-3.731zm-1.012-4.711l-.096-.671h-1.905v.671h1.905zm4.827.003l-.004-3.562h-2.911l-.475 3.324c.749.16 1.627.336 2.586.41zm2.368-3.791h-1.928l-.055-1.229h1.928c.002.41-.004.82-.012 1.229zm-4.195 7.425c.78.204 1.761.326 2.915.342l.001 3.284c-3.997 0-7.185-1.52-9.628-3.963l2.025-2.025c1.998 1.998 4.77 3.137 7.597 3.137zm-.651 4.385l-1.047 1.047c-2.062 1.944-4.758 3.15-7.581 3.15-3.856 0-7.348-1.405-9.979-3.962l2.316-2.023c1.631 1.428 3.793 2.298 5.663 2.298 2.008 0 3.864-.522 5.515-1.423z"/></svg>
+            Entrar com Credenciais Starfield
+        </button>
+        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors shadow-lg" data-login-type="starfield">
+            <img src="assets/Logo-Google-G.png" id="google-img">
+            Entrar com o gmail
+        </button>
+        <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors shadow-lg" data-login-type="guest">
+            Entrar como Convidado
+        </button>
+    </div>
+
+    <p class="text-sm mt-6 mb-2 text-red-300 cursor-pointer hover:text-red-400">
+        Esqueceu a senha?
+    </p>
+
+    <div class="flex justify-between w-full max-w-sm mt-8 text-sm">
+        <span class="text-gray-400 cursor-pointer hover:text-white">Privacidade</span>
+        <span class="text-red-400 cursor-pointer hover:text-red-500" data-login-type="help">Não consegue entrar?</span>
+    </div>
+</div>
         <div id="profile-selection" class="w-full max-w-md">
             <div class="glass-card rounded-2xl p-6 md:p-8 text-center shadow-2xl">
                 <h1 class="text-3xl md:text-4xl font-bold mb-2">Bem-vindo ao Starfield</h1>
@@ -380,5 +430,4 @@ button[type="submit"]#business-form:hover {
 
 
 </body>
-
 </html>
